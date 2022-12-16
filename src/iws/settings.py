@@ -68,7 +68,7 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'leaflet',
     'django_media_fixtures',
     PROJECT_NAME + '.sea_storm_atlas',
-    PROJECT_NAME + ".measurements",
+    # PROJECT_NAME + ".measurements",
     PROJECT_NAME + '.tmes',
     PROJECT_NAME + ".dashboards",
     PROJECT_NAME + ".polls",
@@ -191,10 +191,10 @@ DATABASES['dss_pharos_db']['user'] = os.getenv('DSS_PHAROS_NAME')
 DATABASES['dss_pharos_db']['password'] = os.getenv('DSS_PHAROS_PASSWORD')
 
 # MEASUREMENTS
-MEASUREMENTS_DATABASE_URL = os.getenv('MEASUREMENTS_DATABASE_URL')
-DATABASES['measurements'] = dj_database_url.parse(
-    MEASUREMENTS_DATABASE_URL,
-    conn_max_age=GEONODE_DB_CONN_MAX_AGE)
+# MEASUREMENTS_DATABASE_URL = os.getenv('MEASUREMENTS_DATABASE_URL')
+# DATABASES['measurements'] = dj_database_url.parse(
+#     MEASUREMENTS_DATABASE_URL,
+#     conn_max_age=GEONODE_DB_CONN_MAX_AGE)
 
 
 # FORECASTS
