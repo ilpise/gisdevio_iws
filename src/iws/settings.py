@@ -69,6 +69,7 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'django_media_fixtures',
     PROJECT_NAME + '.sea_storm_atlas',
     # PROJECT_NAME + ".measurements",
+    # PROJECT_NAME + ".thredds",
     PROJECT_NAME + '.tmes',
     PROJECT_NAME + ".dashboards",
     PROJECT_NAME + ".polls",
@@ -84,7 +85,7 @@ ROOT_URLCONF = os.getenv('ROOT_URLCONF', '{}.urls'.format(PROJECT_NAME))
 # - Give priority to local geonode-project ones
 STATICFILES_DIRS = [
     os.path.join(LOCAL_ROOT, "static"),
-    os.path.join(LOCAL_ROOT, "frontend", "static"),
+    # os.path.join(LOCAL_ROOT, "frontend", "static"),
 ] + STATICFILES_DIRS
 
 # Location of locale files
