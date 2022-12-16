@@ -28,7 +28,7 @@ from geonode.services import enumerations
 from geonode.services.models import Service
 from geonode.services.serviceprocessors import get_service_handler
 from geonode.services.serviceprocessors import get_available_service_types
-from .serviceprocessors import get_available_service_types_polls, get_service_handler_thredds
+# from .serviceprocessors import get_available_service_types_polls, get_service_handler_thredds
 
 logger = logging.getLogger(__name__)
 

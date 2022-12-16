@@ -60,8 +60,6 @@ def register_service_wms(request):
             #     reverse("harvest_resources",
             #             kwargs={"service_id": service.id})
             # )
-
-            # reverse(viewname, urlconf=None, args=None, kwargs=None, current_app=None)
             result = JsonResponse(reverse("harvest_resources",
                                           kwargs={"service_id": service.id}),
                                   safe=False, status=200
@@ -76,6 +74,7 @@ def register_service_wms(request):
 
 @login_required
 # Questa funzione viene chiamata per tutti i tipi di servizi selezionati nel selectbox
+# NOT USED
 def register_thredds_service(request):
     service_register_template = "service_register.html"
     # service_register_template = loader.get_template('service_register.html')
