@@ -20,3 +20,6 @@ django-leaflet
 django-braces==1.15.0
 
 django-media-fixtures==1.0.0
+
+# thredds
+siphon
