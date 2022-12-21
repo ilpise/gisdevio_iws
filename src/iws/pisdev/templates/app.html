@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load render_bundle from webpack_loader %} <!-- django-webpack-loader -->
+
+<!-- https://github.com/django-webpack/django-webpack-loader#rendering -->
+
+{% block middle %}
+    <div id="app"></div>
+    <div id="modals-portal-wrapper" class="bs5"></div>
+    {% render_bundle 'seastorm' %}
+    {% csrf_token %}
+{% endblock %}
