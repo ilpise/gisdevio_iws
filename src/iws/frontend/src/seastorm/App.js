@@ -1,7 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import AppRoutes from './routes';
+import D6Routes from './d6routes';
 import { store } from './store';
+
+// Log the initial state
+console.log('Initial state: ', store.getState())
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,6 +17,7 @@ const App = () => {
       <Provider store={store}>
         <AuthLoader>
           <AppRoutes />
+          <D6Routes />
         </AuthLoader>
       </Provider>
       <ToastContainer 
