@@ -69,10 +69,12 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'django_media_fixtures',
     PROJECT_NAME + '.sea_storm_atlas',
     # PROJECT_NAME + ".measurements",
-    PROJECT_NAME + ".thredds",
+    # PROJECT_NAME + ".thredds",
+    'iws.thredds',
     PROJECT_NAME + '.tmes',
     PROJECT_NAME + ".dashboards",
     PROJECT_NAME + ".polls",
+    PROJECT_NAME + ".pisdev",
     'webpack_loader',
     'solo',
 )
@@ -286,3 +288,22 @@ WEBPACK_LOADER = {
     'STATS_FILE': os.path.join(LOCAL_ROOT, 'frontend', 'webpack-stats.json')
   }
 }
+
+
+# https://training.geonode.geosolutionsgroup.com/master/GN4/mapstore_client/003_CONFIGURATION.html 
+#MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
+#    {
+#        "op": "remove",
+#        "jsonpath": "$.dataset_viewer..[?(@.name == 'Timeline')]",
+#    },
+#]
+
+# MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
+#    {
+#        "op": "replace",
+#        "jsonpath": "$.dataset_viewer..[?(@.name == 'Timeline')].cfg",
+#        "value": {
+#             "endValuesSupport": True
+#         }
+#    },
+# ]
