@@ -1,7 +1,7 @@
 {
-    "MyExt": {
-        "bundle": "/MyExt/index.js",
-        "translations": "/MyExt/translations",
-        "assets": "/MyExt/assets"
+    "TimelineThredds": {
+        "bundle": "http://localhost:8082/extension/index.js",
+        "translations": "http://localhost:8082/extension/translations",
+        "assets": "http://localhost:8082/extension/assets"
     }
 }

@@ -8,6 +8,7 @@ const EXTENSION_NAME = 'MyExt';
 
 let error = false;
 Object.keys(extensionIndex).forEach(extensionName => {
+    console.log(extensionName);
     const endpoints = extensionIndex[extensionName];
     Object.keys(endpoints).forEach(key => {
         if (endpoints[key].match('http://localhost:8082/extension')) {
@@ -21,3 +22,7 @@ Object.keys(extensionIndex).forEach(extensionName => {
         }
     });
 });
+
+if (!error) {
+    fs.moveSync(path.resolve(__dirname, 'dist'), path.resolve(extensionsPath, EXTENSION_NAME), { overwrite: true });
+}

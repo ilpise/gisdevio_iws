@@ -42,8 +42,14 @@
   },
   "dependencies": {
     "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#2022.02.xx",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
+    "react-bootstrap": "0.31.0",
     "react-redux": "8.0.5",
-    "webpack": "5.75.0"
+    "file-loader": "2.0.0",
+    "recompose": "^0.24.0",
+    "url-loader": "0.5.7",
+    "webpack": "5.9.0"
   },
   "mapstore": {
     "extensionName": "MyExt"

@@ -290,12 +290,26 @@ WEBPACK_LOADER = {
 
 
 # https://training.geonode.geosolutionsgroup.com/master/GN4/mapstore_client/003_CONFIGURATION.html 
-#MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
-#    {
-#        "op": "remove",
-#        "jsonpath": "$.dataset_viewer..[?(@.name == 'Timeline')]",
-#    },
-#]
+
+
+# Questo non visualizza la timeline originale al path dataset
+# ma comunque si vedono ancora la chiamata al DescribeDomains 
+# 
+# MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
+#     {
+#         "op": "remove",
+#         "jsonpath": "$.dataset_viewer..[?(@.name == 'Timeline')]",
+#     },
+# ]
+
+# Questo non visualizza la timeline originale al path map
+MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
+   {
+       "op": "remove",
+       "jsonpath": "$.map_viewer..[?(@.name === 'Timeline')]",
+   },
+]
+
 
 # MAPSTORE_PLUGINS_CONFIG_PATCH_RULES = [
 #    {

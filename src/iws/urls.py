@@ -47,4 +47,7 @@ urlpatterns += (
     # thredds
     url(r'^thredds/', include('iws.thredds.urls')),
 
+    # pisdev
+    path('pisdev/', include('iws.pisdev.urls')),
+
 )

@@ -1,0 +1,1 @@
+(self.webpackChunkMyExt=self.webpackChunkMyExt||[]).push([[477],{2477:(e,t,r)=>{"use strict";r.r(t),r.d(t,{default:()=>s});const s=class{readStyle(e){return new Promise(((t,r)=>{try{t(e)}catch(e){r(e)}}))}writeStyle(e){return new Promise(((t,r)=>{try{t(e)}catch(e){r(e)}}))}}}}]);
